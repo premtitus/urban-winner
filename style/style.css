@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#c2e59c), to(#64b3f4));
+  background: linear-gradient(to right, #c2e59c, #64b3f4);
+  font-family: "Roboto Condensed", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.focus {
+  border-bottom: 2px solid #c2e59c;
+}
+
+.non-focus {
+  border-bottom: 1px solid #adadaa;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #c2e59c;
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+          box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#login-form {
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+  padding: 60px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#login-form .title-container h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#login-form .form-control {
+  margin-bottom: 40px;
+}
+
+#login-form .form-control .input-field {
+  margin-bottom: 20px;
+}
+
+#login-form .form-control .input-field input {
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+
+#login-form .form-control .input-field input:focus + .separator {
+  -webkit-transform: scaleX(1) translateY(-2px);
+          transform: scaleX(1) translateY(-2px);
+  opacity: 1;
+}
+
+#login-form .form-control .input-field .separator {
+  height: 2px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#c2e59c), to(#64b3f4));
+  background: linear-gradient(to right, #c2e59c, #64b3f4);
+  display: block;
+  -webkit-transform: scaleX(0) translateY(-2px);
+          transform: scaleX(0) translateY(-2px);
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  opacity: 0;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+#login-form .form-control .remember {
+  margin-bottom: 20px;
+}
+
+#login-form .form-control .btn-container {
+  text-align: center;
+}
+
+#login-form .form-control .btn-container input {
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#c2e59c), to(#64b3f4));
+  background: linear-gradient(to right, #c2e59c, #64b3f4);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 5px;
+  background-size: 150%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#login-form .form-control .btn-container input:hover {
+  background-position: right;
+}
+
+#login-form .sign-up-link {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#login-form .divider {
+  margin-bottom: 30px;
+}
+
+#login-form .divider p {
+  color: #adadaa;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #adadaa;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+#login-form .divider p span {
+  padding: 0 10px;
+  background: #fff;
+}
+
+#login-form .social-sign-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#login-form .social-sign-up .social {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#login-form .social-sign-up .social a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+#login-form .social-sign-up .social a i {
+  margin-left: 5px;
+}
+
+#login-form .social-sign-up #facebook {
+  background: #3c5a99;
+}
+
+#login-form .social-sign-up #facebook:hover {
+  background: #31497d;
+}
+
+#login-form .social-sign-up #google {
+  background: #db4437;
+}
+
+#login-form .social-sign-up #google:hover {
+  background: #c73124;
+}
+
+#login-form .social-sign-up #twitter {
+  background: #1da1f2;
+}
+
+#login-form .social-sign-up #twitter:hover {
+  background: #0d8ddb;
+}
+/*# sourceMappingURL=style.css.map */

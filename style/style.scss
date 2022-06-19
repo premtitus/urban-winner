@@ -1,0 +1,200 @@
+$main-color: #c2e59c;
+$second-color: #64b3f4;
+$dark-main-color: #81659e;
+$white-color: #fff;
+$black-color: #000;
+$grey-color: #adadaa;
+$facebook-color: #3c5a99;
+$facebook-dark-color: #31497d;
+$google-color: #db4437;
+$google-dark-color: #c73124;
+$twitter-color: #1da1f2;
+$twitter-dark-color: #0d8ddb;
+$font: "Roboto Condensed", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    // background: $main-color;
+    background: linear-gradient(to right, $main-color, $second-color);
+    font-family: $font;
+    min-height: 100vh;
+}
+
+.container {
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.focus {
+    border-bottom: 2px solid $main-color;
+}
+
+.non-focus {
+    border-bottom: 1px solid $grey-color;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid $main-color;
+    -webkit-text-fill-color: $black-color;
+    box-shadow: 0 0 0px 1000px $white-color inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+#login-form {
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+    background: $white-color;
+    border-radius: 5px;
+    padding: 60px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .title-container {
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    }
+    .form-control {
+        margin-bottom: 40px;
+        .input-field {
+            margin-bottom: 20px;
+            input {
+                width: 100%;
+                font-family: $font;
+                font-size: 20px;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                outline: none;
+                background: none;
+                padding: 0 5px;
+                height: 40px;
+                &:focus + .separator {
+                    transform: scaleX(1) translateY(-2px);
+                    opacity: 1;
+                }
+            }
+            .separator {
+                height: 2px;
+                width: 100%;
+                // background: $main-color;
+                background: linear-gradient(
+                    to right,
+                    $main-color,
+                    $second-color
+                );
+                display: block;
+                transform: scaleX(0) translateY(-2px);
+                transform-origin: 50%;
+                opacity: 0;
+                transition: all 0.15s linear;
+            }
+        }
+
+        .remember {
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            text-align: center;
+            input {
+                width: 100%;
+                font-family: $font;
+                font-size: 20px;
+                // background: $main-color;
+                background: linear-gradient(
+                    to right,
+                    $main-color,
+                    $second-color
+                );
+                border: none;
+                color: $white-color;
+                cursor: pointer;
+                height: 50px;
+                border-radius: 5px;
+                background-size: 150%;
+                transition: 0.5s;
+                &:hover {
+                    background-position: right;
+                }
+            }
+        }
+    }
+    .sign-up-link {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .divider {
+        margin-bottom: 30px;
+        p {
+            color: $grey-color;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid $grey-color;
+            line-height: 0.1em;
+            margin: 10px 0 20px;
+            span {
+                padding: 0 10px;
+                background: $white-color;
+            }
+        }
+    }
+
+    .social-sign-up {
+        display: flex;
+        justify-content: space-around;
+        .social {
+            padding: 10px;
+            border-radius: 5px;
+            a {
+                text-decoration: none;
+                color: $white-color;
+                cursor: pointer;
+                i {
+                    margin-left: 5px;
+                }
+            }
+        }
+        #facebook {
+            background: $facebook-color;
+            &:hover {
+                background: $facebook-dark-color;
+            }
+        }
+
+        #google {
+            background: $google-color;
+            &:hover {
+                background: $google-dark-color;
+            }
+        }
+
+        #twitter {
+            background: $twitter-color;
+            &:hover {
+                background: $twitter-dark-color;
+            }
+        }
+    }
+}
